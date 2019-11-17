@@ -1,5 +1,6 @@
 package com.collabera.model;
 
+
 public class Employee {
 
 	private int id;
@@ -9,7 +10,6 @@ public class Employee {
 	public Employee() {
 		super();
 	}
-	
 	
 	public Employee(int id, String firstName, String lastName) {
 		super();

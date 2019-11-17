@@ -58,9 +58,8 @@ public class EmployeeDao {
 		if(employee==null) return false;
 		PreparedStatement statement = JdbcUtils.getConnection().prepareStatement("INSERT INTO employeesdb.employees(employee_id, last_name, first_name, department_id)VALUES(?,?,?,?)");
 				statement.setInt(1, employee.getId());
-				statement.setString(2, employee.getLastName());
-				statement.setString(3, employee.getFirstName());
-				statement.setObject(4, employee.getDepartment().ordinal()+1);
+				statement.setString(2, employee.getFirstName());
+				statement.setString(3, employee.getLastName());
 			int count = 0;
 			try {
 				count = statement.executeUpdate();
