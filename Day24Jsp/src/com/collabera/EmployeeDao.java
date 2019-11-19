@@ -1,4 +1,4 @@
-package com.collabera.model;
+package com.collabera;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package com.collabera.model;
+package com.collabera;
 
 
 public class Employee {

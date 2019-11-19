@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@page import = "com.collabera.model.EmployeeDao"%>
-<%@page import = "com.collabera.model.Employee"%>
+<%@page import = "com.collabera.EmployeeDao"%>
+<%@page import = "com.collabera.Employee"%>
 <!DOCTYPE html>
 <html>
 <head>
