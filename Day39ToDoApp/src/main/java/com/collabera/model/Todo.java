@@ -117,7 +117,4 @@ public class Todo {
 		return "Todo [id=" + id + ", desc=" + desc + ", user=" + user + ", targetDate=" + targetDate + ", status="
 				+ status + "]";
 	}
-	
-	
-	
 }

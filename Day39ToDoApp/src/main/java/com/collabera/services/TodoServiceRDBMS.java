@@ -33,8 +33,9 @@ public class TodoServiceRDBMS implements TodoServiceI {
 	}
 	
 	// return todo by id
-	public Todo getTodo(int todoId) {
-		return null;
+	public Todo getTodo(int todoId) throws SQLException {
+		Todo todo = todoDao.getTodo(todoId);
+		return todo;
 	}
 	
 	// add a todo to list
@@ -45,13 +46,16 @@ public class TodoServiceRDBMS implements TodoServiceI {
 	}
 
 	// update a todo in the list
-	public Todo editTodo(Todo todo){
-		return null;
+	public Todo editTodo(Todo todo) throws SQLException{
+		Todo editTodo = todoDao.editTodo(todo);
+		return editTodo;
 	}
 	
 	// delete a todo
-	public Todo deleteTodo(int todoId){
-		return null;
+	public Todo deleteTodo(int todoId) throws SQLException{
+		Todo deletedTodo = todoDao.deleteTodo(todoId);
+		System.out.println("you pushed delete");
+		return deletedTodo;
 	}
 	
 }

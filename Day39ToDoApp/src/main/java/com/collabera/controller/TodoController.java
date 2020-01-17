@@ -68,7 +68,7 @@ public class TodoController {
 	}
 	
 	@RequestMapping(value="/deletetodo", method = RequestMethod.GET)
-	public String deleteTodo(@RequestParam int todoId) {
+	public String deleteTodo(@RequestParam int todoId) throws SQLException {
 		
 		if(todoId == 1) {
 			throw new RuntimeException("Something Went Wrong");
@@ -78,7 +78,7 @@ public class TodoController {
 	}
 	
 	@RequestMapping(value="/edittodo", method = RequestMethod.GET)
-	public String showEditTodo(ModelMap model,@RequestParam int todoId) {
+	public String showEditTodo(ModelMap model,@RequestParam int todoId) throws SQLException {
 		Todo todo = service.getTodo(todoId);
 		model.addAttribute("todo",todo);
 		return "todo";
@@ -86,7 +86,7 @@ public class TodoController {
 
 	@RequestMapping(value="/edittodo", method = RequestMethod.POST)
 	public String editTodo(ModelMap model, @Valid Todo todo,
-			BindingResult result) {
+			BindingResult result) throws SQLException {
 		if(result.hasErrors()) {
 			return "todo";
 		}
